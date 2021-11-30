@@ -1,0 +1,18 @@
+[package]
+name = "idftest"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+
+[workspace]
+members = [
+    "./foolib"
+]
+
+[dependencies]
+foolib = { path = "./foolib" }
+
+[profile.dev]
+opt-level = "s"
